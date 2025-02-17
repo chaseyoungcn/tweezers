@@ -9,8 +9,8 @@ Tweezers is a framework for security event detection via event attribution-centr
 ### Setup
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/Tweezers.git
-cd Tweezers
+git clone https://github.com/yourusername/tweezers.git
+cd tweezers
 ```
 
 2. Create and activate a conda environment:

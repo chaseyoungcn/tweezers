@@ -27,15 +27,21 @@ conda activate tweezers
 │ ├── keywords_crawl.txt # Keywords for Twitter API filtering
 │ ├── 202401_tweets_eval.json # Evaluation dataset for January 2024
 │ └── 202402_tweets_eval.json # Evaluation dataset for February 2024
+│
 ├── model/
 │ ├── tweetembedder.py # Tweet embedding model implementation
 │ ├── tweetclassifier.py # Tweet classification model
 │ └── gnn.py # Graph Neural Network baseline implementations
+│
+├── tweet_features/ # Directory for storing embeddings of tweets with different embedding methods
+│
 ├── utils/
-│ ├── clustering_utils.py # Utilities for tweet clustering
 │ ├── classification_utils.py # Utilities for tweet classification
-│ ├── preprocess_text.py # Text preprocessing utilities
-│ └── early_stopping.py # Early stopping implementation
+│ ├── clustering_utils.py # Utilities for tweet clustering
+│ ├── early_stopping.py # Early stopping implementation
+│ ├── loss.py # Loss functions for training tweet embedding model
+│ └── preprocess_text.py # Text preprocessing regex rules
+│
 ├── trained_models/ # Directory for storing trained models
 │ └── [model_name].pt # Trained model checkpoints
 ├── environment.yml # Conda environment specification
@@ -60,7 +66,7 @@ Given a tweet dataset, you should run the processing pipeline as needed (you can
 ## Model Training
 
 The framework uses pre-trained models that can be found in the `trained_models/` directory. 
-The trainign code will be released soon.
+The training code will be released soon.
 
 
 ## Data Availability

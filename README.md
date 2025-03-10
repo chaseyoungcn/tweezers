@@ -9,7 +9,7 @@ Tweezers is a framework for security event detection via event attribution-centr
 ### Setup
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/tweezers.git
+git clone https://github.com/jiancui-research/tweezers.git
 cd tweezers
 ```
 

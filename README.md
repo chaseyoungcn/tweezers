@@ -67,6 +67,10 @@ python eval_tweetembedder.py
 
 Given a tweet dataset, you should run the processing pipeline as needed (you can refer to the `utils/preprocess_text.py` for some necessary regex rules), then you can leverage our tweet embedding model to generate the tweet embedding and leverage DBSCAN to detect the security events.
 
+### 疑惑
+1. eids怎么来的？ 人工标注的话代表着什么？ 为什么可以作为真实标签？
+2. 为什么使用作者embedding模型生成embedding，经dbscan聚类后，所产出的标签可以跟eids对照？
+3. 作者data中的word2vec列有什么意义？我看评估嵌入中只用到了eids（作为真实标签）和ner（作为图连接）。而原始嵌入直接加载的berttweet。 我还需要熟悉bertweet的使用。
 
 ## Model Training
 

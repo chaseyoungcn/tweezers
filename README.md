@@ -37,7 +37,9 @@ conda activate tweezers
 │
 ├── utils/
 │ ├── classification_utils.py # Utilities for tweet classification
-│ ├── clustering_utils.py # Utilities for tweet clustering
+│ ├── clustering_utils.py # Utilities for tweet clustering 
+    ｜-get_embeddings 由图和原始embedding（由bertweet生成）使用tweetbedder生成embedding    
+    ｜-find_best_eps  寻找最佳邻域eps，其中使用dbscan对embedding聚类，使用eids作为真实标签和预测标签计算指标nmi
 │ ├── early_stopping.py # Early stopping implementation
 │ ├── loss.py # Loss functions for training tweet embedding model
 │ └── preprocess_text.py # Text preprocessing regex rules
@@ -46,6 +48,9 @@ conda activate tweezers
 │ └── [model_name].pt # Trained model checkpoints
 ├── environment.yml # Conda environment specification
 └── eval_tweetembedder.py # Evaluation script
+  ｜-1. 加载tweet_features中已生成的原始embedding
+  ｜-2. 调用get_embeddings获取tweetembedding（new）
+  | -3. 调用find_best_eps 输出最佳指标
 ```
 
 ## Usage
